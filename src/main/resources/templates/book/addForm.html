@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{/css/book/addForm.css}">
+</head>
+<body>
+
+<div class="container">
+  <form th:action="@{/library/add}" th:object="${book}" method="post">
+
+    <div th:if="${#fields.hasGlobalErrors()}">
+      <span class="field-error" th:each="err : ${#fields.globalErrors()}" th:text="${err}">글로벌 오류 메시지</span>
+    </div>
+
+    <div class="book-Info">
+      <div>
+        <label for="bookName">도서명</label>
+        <input th:errorclass="field-error" type="text" id="bookName" th:field="*{bookName}" placeholder="도서명을 입력하세요."><br>
+        <span class="field-error" th:errors="*{bookName}"></span>
+      </div>
+
+      <div>
+        <label for="author">저자명</label>
+        <input th:errorclass="field-error" type="text" id="author" th:field="*{author}" placeholder="저자명을 입력하세요."><br>
+        <span class="field-error" th:errors="*{author}"></span>
+      </div>
+
+      <div>
+        <label for="start">시작일</label>
+        <input type="date" id="start" th:field="*{start}">
+      </div>
+
+      <div>
+        <label for="page">총 쪽수</label>
+        <input th:errorclass="field-error" type="text" id="page" th:field="*{page}" placeholder="총 쪽수를 입력하세요."><br>
+        <span class="field-error" th:errors="*{page}"></span>
+      </div>
+
+      <div>
+        <label for="curr_page">현재 쪽수</label>
+        <input th:errorclass="field-error" type="text" id="curr_page" th:field="*{curr_page}" placeholder="현재 쪽수를 입력하세요."><br>
+        <span class="field-error" th:errors="*{curr_page}"></span>
+      </div>
+
+    </div>
+    <div class="radio-btn">
+      <span class="field-error" th:errors="*{status}"></span>
+      <div th:each="type : ${status}">
+        <input th:errorclass="field-error" type="radio" id="status" name="status" th:value="${type.name()}">
+        <label for="status" th:text="${type.description}"></label>
+      </div>
+    </div>
+    <div class="btn">
+      <button type="submit">등록</button>
+      <button th:onclick="|location.href='@{/library}'|"
+              type="button">취소
+      </button>
+    </div>
+  </form>
+
+</div> <!-- /container-->
+
+</body>
+</html>

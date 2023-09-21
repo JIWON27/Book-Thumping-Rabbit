@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{/css/report/form.css}">
+</head>
+<body>
+<form class="form-container" th:action th:object="${report}" method="post">
+    <div>
+      <input th:errorclass="field-error" type="text" id="title" th:field="*{title}" placeholder="제목을 입력해주세요"/><br>
+      <span th:errorclass="field-error" th:errors="*{title}"></span>
+    </div>
+
+    <div>
+      <label>작성일</label>
+      <input type="date" id="date" th:field="*{date}"/>
+      <span th:errorclass="field-error" th:errors="*{date}"></span>
+    </div>
+
+    <div>
+      <textarea th:errorclass="field-error" id="content" th:field="*{content}" cols="55" rows="15" placeholder="내용을 입력해주세요"></textarea><br>
+      <span th:errorclass="field-error" th:errors="*{content}"></span>
+    </div>
+
+    <div class="btn">
+      <button type="submit">등록</button>
+      <button th:onclick="|location.href='@{/library}'|" type="button">취소</button>
+    </div>
+</form>
+
+</body>
+</html>

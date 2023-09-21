@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: white;
+}
+header {
+    font-style: italic;
+    height: 5em;
+    background-color: rgb(231, 244, 253);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-section {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+}
+.right-section {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1em;
+}
+.right-section button {
+    border-radius: 5px;
+    border-color: #0056b3;
+    color: black;
+    padding: 0.7em;
+    margin: 0.5em;
+}
+.container {
+    display: grid;
+    grid-template-columns : repeat(5,1fr);
+    width: 100vw;
+    height: 100vh;
+}
+.bookThumbNail {
+    border : 2px solid lightcyan;
+    border-radius: 5px;
+    padding: 2.5em;
+    height: 50vh;
+    box-shadow: lightgray 6px 6px;
+    border-left : 1em solid lightsteelblue;
+    margin : 2em;
+    background-color: rgb(215, 234, 253);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+progress {
+    width: 100%;
+    display: inline-block;
+    height: 10px;
+    margin-bottom: 1.5em;
+}
+.rabbit {
+    width: 100%;
+}
+.report-title {
+    width: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+a {
+    text-decoration: none;
+}

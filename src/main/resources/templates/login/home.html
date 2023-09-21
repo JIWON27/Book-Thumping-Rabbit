@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  <link rel="stylesheet" th:href="@{/css/login/home.css}">
+</head>
+<body>
+<h1 style="font-style: italic">Book치는 토끼</h1>
+<h3 th:if="${loginUser == null}">해당 서비스를 이용하기 위해선 로그인 필요합니다.</h3>
+  <div class="container">
+        <div th:if="${loginUser != null}">
+          <h3 th:text="|${loginUser.name}님. 반갑습니다.|"></h3>
+        </div>
+
+        <div>
+          <button type="button" th:onclick="|location.href='@{/login}'|" th:if="${loginUser == null}">로그인</button>
+          <button type="button" th:onclick="|location.href='@{/add/user}'|" th:if="${loginUser == null}">회원가입</button>
+
+          <button type="button" th:onclick="|location.href='@{/library}'|" th:if="${loginUser != null}">서비스 이용</button>
+          <form th:action="@{/logout}" method="post" th:if="${loginUser != null}">
+            <button type="submit">로그아웃</button>
+          </form>
+      </div>
+  </div>
+
+</body>
+</html>

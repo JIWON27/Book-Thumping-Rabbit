@@ -1,0 +1,73 @@
+.field-error{
+    border-color: red;
+}
+span {
+    color: red;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    border: 5px solid gray;
+    background-color: white;
+    width : 18em;
+    height: 20em;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: darkgray 5px 5px ;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.user-Info {
+    width: 100%;
+}
+.user-Info div{
+    display: flex;
+    flex-direction: column;
+}
+.user-Info > * {
+    margin: 0.2em;
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+loginInfo > * {
+    width: 100%;
+    display: flex;
+}
+input {
+    flex-grow: 1;
+    border-radius: 5px;
+}
+label {
+    display: inline-block;
+    width: 5em;
+}
+.btn {
+    display: flex;
+    flex-flow: column;
+}
+.btn > button {
+    border-radius: 5px;
+    border-color: #0056b3;
+    color: black;
+    width: 300px;
+    padding: 0.7em;
+    margin: 0.5em;
+}
+

@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid gray;
+    background-color: white;
+    width : 30em;
+    height: 27em;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: darkgray 5px 5px ;
+}
+input, textarea {
+    width: 40em;
+}
+#title {
+    height: 3em;
+}
+textarea {
+    resize: none;
+}
+.btn {
+    display: flex;
+}
+.btn > button {
+    border-radius: 5px;
+    border-color: #0056b3;
+    color: black;
+    width: 150px;
+    padding: 0.7em;
+    margin: 0.5em;
+}

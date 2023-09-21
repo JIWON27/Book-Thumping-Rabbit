@@ -1,0 +1,37 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container {
+    border: 5px solid gray;
+    background-color: white;
+    border-radius: 5px;
+    width : 288px;
+    height: 300px;
+    padding: 2em;
+    box-shadow: darkgray 5px 5px ;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.book-Info > *{
+    margin: 0.8em;
+}
+label {
+    display: inline-block;
+    width: 5em;
+}
+button {
+    border-radius: 5px;
+    border-color: #0056b3;
+    color: black;
+    padding: 10px;
+}
+.radio-btn {
+    display: flex;
+}

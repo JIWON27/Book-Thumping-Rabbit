@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{/css/book/books.css}">
+</head>
+<body>
+<header>
+  <div class="left-section">
+    <img class="user" src="/img/user.png" alt="user_img">
+    <span th:text="|${loginUser.name} 님.|">유저명</span></div>
+  <div class="middle-section">
+    <h1>Book치는 토끼</h1>
+  </div>
+  <div class="right-section">
+    <button onclick="location.href='addForm.html'"
+            th:onclick="|location.href='@{/library/add}'|"
+            type="button">도서 등록
+    </button>
+    <form th:action="@{/logout}" method="post" th:if="${loginUser != null}">
+      <button type="submit">로그아웃</button>
+    </form>
+  </div>
+</header>
+<div class="container">
+
+  <div class="bookThumbNail" th:value="${book.id}" th:each="book : ${books}">
+    <progress th:value="${(book.curr_page * 100.0 / book.page)}" th:max="100"></progress><br>
+    <a th:href="@{/library/book/{bookId}(bookId=${book.id})}" th:text="${book.bookName}"></a>
+    <h5 th:text="${book.author}"></h5>
+    <img th:if="${(book.curr_page * 100.0 / book.page)==100}"class="rabbit" src="/img/stamp.png">
+    <a  class="report-title" th:if="${book.report != null}"
+       th:href="@{/report/{reportId}(reportId=${book.id})}"
+       >리포트 조회
+    </a>
+  </div>
+
+</div>
+</body>
+</html>

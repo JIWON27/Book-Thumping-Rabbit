@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입</title>
+  <link rel="stylesheet" th:href="@{/css/login/addForm.css}">
+</head>
+<body>
+
+<div class="container">
+  <form th:action th:object="${user}" method="post">
+    <div class="user-Info">
+      <div>
+        <label for="name">이름</label>
+        <input th:errorclass="field-error" type="text" id="name" th:field="*{name}" placeholder="이름을 입력해주세요.">
+        <span class="field-error" th:errors="*{name}"></span>
+      </div>
+      <div>
+        <label for="loginId">ID</label>
+        <input th:errorclass="field-error" type="text" id="loginId" th:field="*{loginId}" placeholder="아이디를 입력해주세요.">
+        <span class="field-error" th:errors="*{loginId}"></span>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input th:errorclass="field-error" type="password" id="password" th:field="*{password}" placeholder="비밀번호를 입력해주세요.">
+        <span class="field-error" th:errors="*{password}"></span>
+      </div>
+    </div>
+    <div class="btn">
+      <button type="submit">회원 가입</button>
+      <button type="button" th:onclick="|location.href='@{/login}'|">취소</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

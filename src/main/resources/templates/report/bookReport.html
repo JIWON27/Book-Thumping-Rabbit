@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{/css/report/report.css}">
+</head>
+<body>
+  <div class="container">
+      <div>
+        <label for="reportId" >ID</label>
+        <input type="text" id="reportId" name="id" th:value="${report.id}" readonly />
+      </div>
+      <div>
+        <label for="title" >제목</label>
+        <input type="text" id="title" name="title" placeholder="Report Title" th:value="${report.title}" readonly />
+      </div>
+
+      <div>
+        <label for="date">작성일</label>
+        <input type="text" id="date" name="date" placeholder="date" th:value="${report.date}" readonly/>
+      </div>
+
+      <div>
+        <label for="content">내용</label>
+        <textarea id="content" name="content" cols="30" rows="10" placeholder="content"
+                  th:text="${report.content}" readonly></textarea>
+      </div>
+
+    <div class="btn">
+      <button th:onclick="|location.href='@{/report/{reportId}/edit(reportId=${report.id})}'|"
+              type="button">수정
+      </button>
+      <button type="button" id="delete-btn">삭제</button>
+      <button th:onclick="|location.href='@{/library}'|"
+              type="button">목록
+      </button>
+    </div>
+    </div>
+  <script th:src="@{/js/deleteReport.js}"></script>
+</body>
+</html>

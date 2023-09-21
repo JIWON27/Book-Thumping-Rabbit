@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{/css/book/book.css}">
+</head>
+<body>
+  <div class="container">
+    <div class="book-Info">
+      <div>
+        <label for="bookId">도서 ID</label>
+        <input type="text" id="bookId" th:field="*{book.id}" readonly>
+      </div>
+
+      <div>
+        <label for="bookName">도서명</label>
+        <input type="text" id="bookName" th:field="*{book.bookName}" readonly>
+      </div>
+
+      <div>
+        <label for="author">저자명</label>
+        <input type="text" id="author" th:field="*{book.author}"readonly>
+      </div>
+
+      <div>
+        <label for="start">시작일</label>
+        <input type="text" id="start" th:field="*{book.start}" readonly>
+      </div>
+
+      <div th:if="${book.end != null}">
+        <label for="end">종료일</label>
+        <input type="text" id="end" th:field="*{book.end}" readonly>
+      </div>
+
+      <div>
+        <label for="page">총 쪽수</label>
+        <input type="text" id="page" th:field="*{book.page}" readonly>
+      </div>
+
+      <div>
+        <label for="curr_page">현재 쪽수</label>
+        <input type="text" id="curr_page" th:field="*{book.curr_page}" readonly>
+      </div>
+
+    </div>
+      <div class="radio-btn">
+        <div th:each="type : ${status}">
+          <input type="radio" th:field="${book.status}" th:value="${type.name}" id="status" name="status" disabled>
+          <label for="status" th:text="${type.description}">상태</label>
+        </div>
+    </div>
+
+    <div class="btn">
+      <button th:onclick="|location.href='@{/library/{BookId}/edit(BookId=${book.id})}'|"
+              type="button">도서 수정
+      </button>
+      <button th:onclick="|location.href='@{/report/{reportId}/write(reportId=${book.id})}'|"
+              type="button">독서록 작성
+      </button>
+      <button th:onclick="|location.href='@{/library}'|"
+              type="button">목록
+      </button>
+      <button type="button" id="delete-btn">삭제</button>
+    </div>
+  </div> <!-- container-->
+  <script th:src="@{/js/deleteBook.js}"></script>
+</body>
+</html>
