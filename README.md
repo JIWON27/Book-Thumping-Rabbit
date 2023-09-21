@@ -12,7 +12,7 @@
 #### 쿠키-세션 로그인 및 필터를 통한 비로그인시 서비스 이용 불가 
 로그인을 하지 않으면 서비스 이용 불가능
 예시로 로그인을 하지 않고 /library로 접근 시 접근 불가 및 로그인 화면 띄워주기
-![](https://velog.velcdn.com/images/security-won/post/ee79a152-1a60-4335-8747-558cf0ffd258/image.gif)
+![](https://velog.velcdn.com/images/security-won/post/baa462ee-659d-4948-9e38-65ed6460ae5e/image.gif)
 
 #### 도서 및 독서록 CRUD 기능
    - 도서 및 독서록 입력 폼 검증 기능
