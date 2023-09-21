@@ -7,7 +7,7 @@
 <br>
 
 #### 쿠키-세션을 통한 로그인/회원가입/로그아웃 기능
-![](https://velog.velcdn.com/images/security-won/post/5ad87664-a8de-4b1e-910f-dad78aa78439/image.gif)
+![](https://velog.velcdn.com/images/security-won/post/fe31aa2c-a4ee-4f2a-9f32-dcbbb29f9373/image.gif)
 
 #### 쿠키-세션 로그인 및 필터를 통한 비로그인시 서비스 이용 불가 
 로그인을 하지 않으면 서비스 이용 불가능
