@@ -23,5 +23,5 @@
 
 ![](https://velog.velcdn.com/images/security-won/post/1b441331-a5ff-4489-9a6e-64dfc79c4bed/image.gif)
 
-자세한 내용은 아래의 블로그에서 확인 가능함.<br>
+자세한 내용은 아래의 블로그에서 확인 가능.<br>
 [블로그 링크](https://velog.io/@security-won/%EC%82%AC%EC%9D%B4%EB%93%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%82%98%EB%A7%8C%EC%9D%98-%EB%8F%84%EC%84%9C-%EA%B4%80%EB%A6%AC-%EC%84%9C%EB%B9%84%EC%8A%A4)
