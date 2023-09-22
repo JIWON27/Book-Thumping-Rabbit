@@ -4,7 +4,9 @@
 - 입력값 검증
 - 쿠키-세션 로그인 기능
 등 체득을 위한 프로젝트 입니다.
-<br>
+### 기술
+- Spring Booy 2.7.16
+- Java 11
 
 #### 쿠키-세션을 통한 로그인/회원가입/로그아웃 기능
 ![](https://velog.velcdn.com/images/security-won/post/fe31aa2c-a4ee-4f2a-9f32-dcbbb29f9373/image.gif)
