@@ -8,17 +8,18 @@
 - Spring Booy 2.7.16
 - Java 11
 
-#### 쿠키-세션을 통한 로그인/회원가입/로그아웃 기능
+#### 로그인/회원가입/로그아웃 기능
+- 쿠키-세션을 사용하여 구현함.
 ![](https://velog.velcdn.com/images/security-won/post/fe31aa2c-a4ee-4f2a-9f32-dcbbb29f9373/image.gif)
 
-#### 쿠키-세션 로그인 및 필터를 통한 비로그인시 서비스 이용 불가 
-로그인을 하지 않으면 서비스 이용 불가능
-예시로 로그인을 하지 않고 /library로 접근 시 접근 불가 및 로그인 화면 띄워주기
+####비로그인시 서비스 이용 불가 
+- filter, interceptor를 사용하여 로그인을 하지 않으면 서비스 이용 불가능
+- 예시로 로그인을 하지 않고 /library로 접근 시 접근 불가 및 로그인 화면 띄워주기
 ![](https://velog.velcdn.com/images/security-won/post/baa462ee-659d-4948-9e38-65ed6460ae5e/image.gif)
 
 #### 도서 및 독서록 CRUD 기능
    - 도서 및 독서록 입력 폼 검증 기능
-   - 총 쪽수와 현재 쪽수를 가지고 완독 및 프로그래스 바 계산
+   - 총 쪽수와 현재 쪽수를 가지고 도서 완독 및 진행도(프로그래스 바) 계산
    - 완독 시 토끼 도장
 
 ![](https://velog.velcdn.com/images/security-won/post/1b441331-a5ff-4489-9a6e-64dfc79c4bed/image.gif)
