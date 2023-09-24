@@ -10,11 +10,13 @@
 
 #### 로그인/회원가입/로그아웃 기능
 - 쿠키-세션을 사용하여 구현함.
+
 ![](https://velog.velcdn.com/images/security-won/post/fe31aa2c-a4ee-4f2a-9f32-dcbbb29f9373/image.gif)
 
 ####비로그인시 서비스 이용 불가 
 - filter, interceptor를 사용하여 로그인을 하지 않으면 서비스 이용 불가능
 - 예시로 로그인을 하지 않고 /library로 접근 시 접근 불가 및 로그인 화면 띄워주기
+
 ![](https://velog.velcdn.com/images/security-won/post/baa462ee-659d-4948-9e38-65ed6460ae5e/image.gif)
 
 #### 도서 및 독서록 CRUD 기능
